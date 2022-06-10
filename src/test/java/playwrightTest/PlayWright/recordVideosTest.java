@@ -4,28 +4,29 @@ import java.nio.file.Paths;
 
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.*;
+import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.BrowserContext;
+import com.microsoft.playwright.BrowserType;
+import com.microsoft.playwright.Locator;
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.Tracing;
 
-public class Intro {
-	
+public class recordVideosTest {
 	@Test
-	public void resManAddRemoveUser() {
-		String tracePath = System.getProperty("user.dir")+"\\Traces\\traces.zip";
-		
+	public void recordVideoTest() throws Exception{
 		try (Playwright playwright = Playwright.create()) {
 			Browser browser = playwright.chromium()
-					.launch(new BrowserType.LaunchOptions().setHeadless(false)/*.setChannel("msedge")*/);
-			
-			BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1536, 319));
-			
+					.launch(new BrowserType.LaunchOptions().setHeadless(false)/* .setChannel("msedge") */);
+
+			String recorderPath = System.getProperty("user.dir")+"\\screenShotsVideos\\";
+			BrowserContext context = browser.newContext(new Browser.NewContextOptions().setRecordVideoDir(Paths.get(recorderPath)));
+
 			// Start tracing before creating / navigating a page.
-			context.tracing().start(new Tracing.StartOptions()
-			  .setScreenshots(true)
-			  .setSnapshots(true));
-	
-			
+			context.tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true));
+
 			Page page = context.newPage();
-			
+
 			page.navigate("https://qa.myresman.com");
 			System.out.println(page.title());
 			page.type("input[name='Username']", "avadmin");
@@ -61,10 +62,8 @@ public class Intro {
 			page.waitForNavigation(() -> {
 				page.locator("text=Sign Out").click();
 			});
-			//stop tracing
-			context.tracing().stop(new Tracing.StopOptions()
-					  .setPath(Paths.get(tracePath)));
-			
+
+			Thread.sleep(5000);
 			browser.close();
 			playwright.close();
 		} catch (Exception e) {
