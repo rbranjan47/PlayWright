@@ -4,7 +4,8 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.util.Base64;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 
@@ -13,10 +14,14 @@ import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.Playwright.CreateOptions;
 
 public class rough {
 	public static void main(String[] args) throws Exception {
-		try (Playwright playwright = Playwright.create()) {
+		Map<String,String> map = new HashMap<String, String>();
+		map.put("Environment", "QA");
+		map.put("OS", "Window");
+		try (Playwright playwright = Playwright.create(new Playwright.CreateOptions().setEnv(map))) {
 			Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
 			BrowserContext browserContext = browser.newContext();
 			Page pages = browserContext.newPage();

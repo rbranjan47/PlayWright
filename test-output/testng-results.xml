@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-11T01:59:18 IST" name="Default suite" finished-at="2022-06-11T02:00:30 IST" duration-ms="71532">
+  <suite started-at="2022-06-13T08:11:10 IST" name="Default suite" finished-at="2022-06-13T08:11:39 IST" duration-ms="29300">
     <groups>
     </groups>
-    <test started-at="2022-06-11T01:59:18 IST" name="Default test" finished-at="2022-06-11T02:00:30 IST" duration-ms="71532">
-      <class name="playwrightTest.PlayWright.recordVideosTest">
-        <test-method signature="recordVideoTest()[pri:0, instance:playwrightTest.PlayWright.recordVideosTest@10feca44]" started-at="2022-06-11T01:59:18 IST" name="recordVideoTest" finished-at="2022-06-11T02:00:30 IST" duration-ms="71484" status="PASS">
+    <test started-at="2022-06-13T08:11:10 IST" name="Default test" finished-at="2022-06-13T08:11:39 IST" duration-ms="29300">
+      <class name="playwrightTest.PlayWright.assertionsPW">
+        <test-method signature="assertionsPWTest()[pri:0, instance:playwrightTest.PlayWright.assertionsPW@101952da]" started-at="2022-06-13T08:11:10 IST" name="assertionsPWTest" finished-at="2022-06-13T08:11:39 IST" duration-ms="29257" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- recordVideoTest -->
-      </class> <!-- playwrightTest.PlayWright.recordVideosTest -->
+        </test-method> <!-- assertionsPWTest -->
+      </class> <!-- playwrightTest.PlayWright.assertionsPW -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -12,7 +12,6 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.ElementState;
-import com.microsoft.playwright.Frame.LocatorOptions;
 
 public class dynamicTables {
 	@Test
