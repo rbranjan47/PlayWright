@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class configFiles {
-	public Properties properties;
+	protected Properties properties;
 	public String word;
 	public String value;
 	public String filePath = System.getProperty("user.dir") + "//src/main//java//config.properties";
