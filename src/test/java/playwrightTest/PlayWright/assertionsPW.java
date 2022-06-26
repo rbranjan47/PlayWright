@@ -1,4 +1,4 @@
-package playwrightTest.PlayWright;
+ package playwrightTest.PlayWright;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 

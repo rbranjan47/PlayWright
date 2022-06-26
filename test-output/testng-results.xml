@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-06-13T08:11:10 IST" name="Default suite" finished-at="2022-06-13T08:11:39 IST" duration-ms="29300">
+  <suite started-at="2022-06-26T19:05:04 IST" name="Default suite" finished-at="2022-06-26T19:06:20 IST" duration-ms="75624">
     <groups>
     </groups>
-    <test started-at="2022-06-13T08:11:10 IST" name="Default test" finished-at="2022-06-13T08:11:39 IST" duration-ms="29300">
-      <class name="playwrightTest.PlayWright.assertionsPW">
-        <test-method signature="assertionsPWTest()[pri:0, instance:playwrightTest.PlayWright.assertionsPW@101952da]" started-at="2022-06-13T08:11:10 IST" name="assertionsPWTest" finished-at="2022-06-13T08:11:39 IST" duration-ms="29257" status="PASS">
+    <test started-at="2022-06-26T19:05:04 IST" name="Default test" finished-at="2022-06-26T19:06:20 IST" duration-ms="75624">
+      <class name="playwrightTest.PlayWright.networkResponses">
+        <test-method signature="networkResponsesTest()[pri:0, instance:playwrightTest.PlayWright.networkResponses@2b48a640]" started-at="2022-06-26T19:05:04 IST" name="networkResponsesTest" finished-at="2022-06-26T19:06:20 IST" duration-ms="75568" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- assertionsPWTest -->
-      </class> <!-- playwrightTest.PlayWright.assertionsPW -->
+        </test-method> <!-- networkResponsesTest -->
+      </class> <!-- playwrightTest.PlayWright.networkResponses -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

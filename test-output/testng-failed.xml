@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="playwrightTest.PlayWright.reactSelectors">
+      <class name="automationLabsTest.playwright.addUsersTest">
         <methods>
-          <include name="reactSelectorsTest"/>
+          <include name="closeup"/>
+          <include name="homePageTest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- playwrightTest.PlayWright.reactSelectors -->
+      </class> <!-- automationLabsTest.playwright.addUsersTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
