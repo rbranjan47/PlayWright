@@ -8,34 +8,47 @@ import org.testng.annotations.Test;
 import com.microsoft.playwright.Page;
 
 import automationLabsMain.playwright.baseClass;
-import page.playwright.homePages;
+import page.playwright.addUsersPages;
+import page.playwright.loginPage;
 
-public class addUsersTest extends baseClass {
+public class addUsersTest {
 	Page page;
-	homePages homepage = new homePages(page);
+	protected baseClass baseclass;
+	protected loginPage loginpage;
+	protected addUsersPages addusers;
 
 	@BeforeTest
 	public void setup() {
-		page = initBrowser();
+		baseclass = new baseClass();
+		loginpage = new loginPage(page);
+		addusers = new addUsersPages(page);
+		page = baseclass.initBrowser();
 	}
 
 	@Test
 	public void homePageTest() {
 		try {
-			homepage.login();
+			loginpage.login();
 			String actual_title = page.title();
 			String expected_title = "Board Room - ResMan";
 			Assert.assertEquals(actual_title, expected_title);
 		} catch (Exception e) {
 			throw e;
 		}
+
+		try {
+			addusers.clickAdmin().first().hover();
+			addusers.clickProperties().click();
+			addusers.clickUsers().click();
+		} catch (Exception e) {
+			throw e;
+		}
+
 	}
 
 	@AfterTest
 	public void closeup() throws InterruptedException {
-		homepage.logout();
-		Thread.sleep(5000);
-		browser.close();
-		playwright.close();
+		loginpage.logout();
+		baseclass.tearDown();
 	}
 }

@@ -46,4 +46,10 @@ public class baseClass {
 
 		return page;
 	}
+	
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(5000);
+		browser.close();
+		playwright.close();
+	}
 }
