@@ -18,14 +18,9 @@ public class loginPage extends baseClass {
 	private String closeAdvisor = "#CloseAdvisor";
 	private String closePendo = "#pendo-close-guide-9389d88c";
 
-	// constructor
-	public loginPage(Page page) {
-		baseClass.page = page;
-	}
-
 	// check pendo visible
 	public void isPendoVisible() {
-		Locator closePendoPopup = page.locator(closePendo);
+		Locator closePendoPopup = getPage().locator(closePendo);
 		if (closePendoPopup.isVisible()) {
 			closePendoPopup.click();
 		}
@@ -33,7 +28,7 @@ public class loginPage extends baseClass {
 
 	// check close advisor
 	public void closeAdvisor() {
-		Locator closeadvisorPopup = page.locator(closeAdvisor);
+		Locator closeadvisorPopup = getPage().locator(closeAdvisor);
 		if (closeadvisorPopup.isEnabled()) {
 			// closeadvisorPopup.waitFor();
 			closeadvisorPopup.click();
@@ -43,9 +38,9 @@ public class loginPage extends baseClass {
 	// actions
 	public boolean login() {
 		// login into applications
-		page.locator(username).fill(configure.Username);
-		page.locator(password).fill(configure.Password);
-		page.locator(submitButton).click();
+		getPage().locator(username).fill(configure.Username);
+		getPage().locator(password).fill(configure.Password);
+		getPage().locator(submitButton).click();
 
 		// Pendo Popup
 		isPendoVisible();
@@ -53,7 +48,7 @@ public class loginPage extends baseClass {
 		// close advisor
 		closeAdvisor();
 
-		if (page.locator(sign_out).isVisible()) {
+		if (getPage().locator(sign_out).isVisible()) {
 			System.out.println("user logged in successfuly!");
 			return true;
 		}
@@ -62,7 +57,7 @@ public class loginPage extends baseClass {
 
 	public void logout() {
 		// logout from applications
-		page.locator(sign_out).click();
+		getPage().locator(sign_out).click();
 	}
 
 }

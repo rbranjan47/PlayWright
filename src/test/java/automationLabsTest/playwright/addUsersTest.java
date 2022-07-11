@@ -5,31 +5,29 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Page;
 
 import automationLabsMain.playwright.baseClass;
 import page.playwright.addUsersPages;
 import page.playwright.loginPage;
 
-public class addUsersTest {
-	Page page;
-	protected baseClass baseclass;
+
+public class addUsersTest extends baseClass {
+	
 	protected loginPage loginpage;
 	protected addUsersPages addusers;
 
 	@BeforeTest
 	public void setup() {
-		baseclass = new baseClass();
-		loginpage = new loginPage(page);
+		loginpage = new loginPage();
 		addusers = new addUsersPages(page);
-		page = baseclass.initBrowser();
+		initBrowser();
 	}
 
 	@Test
 	public void homePageTest() {
 		try {
 			loginpage.login();
-			String actual_title = page.title();
+			String actual_title = getPage().title();
 			String expected_title = "Board Room - ResMan";
 			Assert.assertEquals(actual_title, expected_title);
 		} catch (Exception e) {
@@ -38,7 +36,7 @@ public class addUsersTest {
 
 		try {
 			addusers.clickAdmin().first().hover();
-			addusers.clickProperties().click();
+			addusers.clickProperties().first().click();
 			addusers.clickUsers().click();
 		} catch (Exception e) {
 			throw e;
@@ -49,6 +47,6 @@ public class addUsersTest {
 	@AfterTest
 	public void closeup() throws InterruptedException {
 		loginpage.logout();
-		baseclass.tearDown();
+		tearDown();
 	}
 }

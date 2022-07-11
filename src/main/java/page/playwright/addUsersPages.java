@@ -18,15 +18,15 @@ public class addUsersPages extends baseClass{
 	}
 	//Actions
 	public Locator clickAdmin() {
-		return page.locator(adminOption);
+		return getPage().locator(adminOption);
 	}
 	
 	public Locator clickProperties() {
-		return page.locator(propertiesOptions);
+		return getPage().locator(propertiesOptions);
 	}
 	
 	public Locator clickUsers() {
-		return page.locator(clickUser);
+		return getPage().locator(clickUser);
 	}
 	
 }
