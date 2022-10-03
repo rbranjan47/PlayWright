@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automationLabsTest.playwright.addUsersTest">
+      <class name="playwrightTest.PlayWright.JSONAuthLogin">
         <methods>
-          <include name="closeup"/>
-          <include name="homePageTest"/>
-          <include name="setup"/>
+          <include name="useStoredJson"/>
         </methods>
-      </class> <!-- automationLabsTest.playwright.addUsersTest -->
+      </class> <!-- playwrightTest.PlayWright.JSONAuthLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
