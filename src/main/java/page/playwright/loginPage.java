@@ -1,7 +1,6 @@
 package page.playwright;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
 
 import automationLabsMain.playwright.baseClass;
 import automationLabsMain.playwright.configFiles;
