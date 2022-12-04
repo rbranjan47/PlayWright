@@ -30,9 +30,9 @@ public class baseClass {
 	// for browser
 	private static ThreadLocal<Browser> browserLocal = new ThreadLocal<>();
 	// for browser context
-	private static ThreadLocal<BrowserContext> browsercontextLocal = new ThreadLocal<>();
+	protected static ThreadLocal<BrowserContext> browsercontextLocal = new ThreadLocal<>();
 	// for pages
-	private static ThreadLocal<Page> pageLocal = new ThreadLocal<>();
+	protected static ThreadLocal<Page> pageLocal = new ThreadLocal<>();
 
 	// Getter method to Get ThreadLocal
 	public static Playwright getPlaywright() {

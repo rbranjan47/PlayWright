@@ -21,7 +21,7 @@ public class addUsersPages extends baseClass{
 		return getPage().locator(adminOption);
 	}
 	
-	public Locator clickProperties() {
+	public Locator clickProperties() { 
 		return getPage().locator(propertiesOptions);
 	}
 	

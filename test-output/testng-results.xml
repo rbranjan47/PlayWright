@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite started-at="2022-08-31T23:20:19 IST" name="Default suite" finished-at="2022-08-31T23:29:24 IST" duration-ms="544685">
+=======
+  <suite started-at="2022-09-18T21:45:44 IST" name="Default suite" finished-at="2022-09-18T21:45:58 IST" duration-ms="14053">
+>>>>>>> branch 'master' of https://github.com/rbranjan47/PlayWright.git
     <groups>
     </groups>
+<<<<<<< HEAD
     <test started-at="2022-08-31T23:20:19 IST" name="Default test" finished-at="2022-08-31T23:29:24 IST" duration-ms="544685">
       <class name="automationLabsTest.playwright.addUsersTest">
         <test-method is-config="true" signature="setup()[pri:0, instance:automationLabsTest.playwright.addUsersTest@66d3eec0]" started-at="2022-08-31T23:20:19 IST" name="setup" finished-at="2022-08-31T23:28:18 IST" duration-ms="479019" status="PASS">
+=======
+    <test started-at="2022-09-18T21:45:44 IST" name="Default test" finished-at="2022-09-18T21:45:58 IST" duration-ms="14053">
+      <class name="loginJSON.loginJsonStore">
+        <test-method signature="loginJson()[pri:0, instance:loginJSON.loginJsonStore@4a7f959b]" started-at="2022-09-18T21:45:44 IST" name="loginJson" finished-at="2022-09-18T21:45:58 IST" duration-ms="13981" status="PASS">
+>>>>>>> branch 'master' of https://github.com/rbranjan47/PlayWright.git
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- setup -->
         <test-method signature="homePageTest()[pri:0, instance:automationLabsTest.playwright.addUsersTest@66d3eec0]" started-at="2022-08-31T23:28:18 IST" name="homePageTest" finished-at="2022-08-31T23:28:54 IST" duration-ms="35594" status="FAIL">
           <exception class="com.microsoft.playwright.TimeoutError">
@@ -219,6 +230,10 @@ at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:107)
           </reporter-output>
         </test-method> <!-- closeup -->
       </class> <!-- automationLabsTest.playwright.addUsersTest -->
+=======
+        </test-method> <!-- loginJson -->
+      </class> <!-- loginJSON.loginJsonStore -->
+>>>>>>> branch 'master' of https://github.com/rbranjan47/PlayWright.git
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

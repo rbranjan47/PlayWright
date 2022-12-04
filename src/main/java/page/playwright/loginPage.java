@@ -2,10 +2,10 @@ package page.playwright;
 
 import com.microsoft.playwright.Locator;
 
-import automationLabsMain.playwright.baseClass;
+import automation.libraries.methods;
 import automationLabsMain.playwright.configFiles;
 
-public class loginPage extends baseClass {
+public class loginPage extends methods {
 
 	configFiles configure = new configFiles();;
 
