@@ -22,8 +22,8 @@ public class maximizeWindow {
 			Page page = browserContext.newPage();
 
 			page.navigate("https://qa.myresman.com");
-			page.type("input[name='Username']", "avadmin");
-			page.type("input[name='Password']", "tester");
+			page.type("input[name='Username']", "adminrabi");
+			page.type("input[name='Password']", "tester1");
 			page.click("button[type='submit']", new Page.ClickOptions().setTimeout(50000));
 
 			Locator closeAdvisorLocator = page.locator("#CloseAdvisor");

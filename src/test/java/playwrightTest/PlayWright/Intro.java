@@ -16,7 +16,7 @@ public class Intro {
 			Browser browser = playwright.chromium()
 					.launch(new BrowserType.LaunchOptions().setHeadless(false)/*.setChannel("msedge")*/);
 			
-			BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1536, 319));
+			BrowserContext context = browser.newContext(new Browser.NewContextOptions().setViewportSize(1290, 475));
 			
 			// Start tracing before creating / navigating a page.
 			context.tracing().start(new Tracing.StartOptions()
@@ -28,8 +28,8 @@ public class Intro {
 			
 			page.navigate("https://qa.myresman.com");
 			System.out.println(page.title());
-			page.type("input[name='Username']", "avadmin");
-			page.type("input[name='Password']", "tester");
+			page.type("input[name='Username']", "adminrabi");
+			page.type("input[name='Password']", "tester1");
 			page.click("button[type='submit']", new Page.ClickOptions().setTimeout(50000));
 
 			Locator closeAdvisorLocator = page.locator("#CloseAdvisor");

@@ -23,16 +23,24 @@ public class reactSelectors {
 
 			pages.navigate("https://www.netflix.com/in/");
 			// react locators
-			Locator enterEmail = pages.locator("_react=p[placeholder='email'] >> input");
-			enterEmail.first().fill("abcxyz@gmail.com");
+			Locator enterEmail = pages.locator("_react=Anonymous[name='email'] >> input");
+			enterEmail.nth(1).fill("abcxyz@gmail.com");
 
 			Locator selectLanguage = pages.locator("_react=UISelect[data-uia='language-picker']");
 			selectLanguage.click();
 
 			// could be handle Once done with drop-down
-			pages.locator("select#lang-switcher-select >> option[data-language='hi']").click();
+			pages.locator("select#lang-switcher-select").selectOption("/in-hi/");
+			pages.waitForTimeout(3000);
+			//navigating back to english 
+			pages.locator("select#lang-switcher-select").selectOption("/in/");
 
-			Thread.sleep(5000);
+			pages.waitForTimeout(5000);
+			Locator storyHeader = pages.locator("h1[class='our-story-card-title']");
+			for (int i = 0; i < storyHeader.count(); i++) {
+				System.out.println(storyHeader.nth(i).textContent());
+			}
+
 			browser.close();
 			playwright.close();
 		} catch (Exception e) {

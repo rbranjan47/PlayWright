@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="playwrightTest.PlayWright.JSONAuthLogin">
+      <class name="playwrightTest.PlayWright.Intro">
         <methods>
-          <include name="useStoredJson"/>
+          <include name="resManAddRemoveUser"/>
         </methods>
-      </class> <!-- playwrightTest.PlayWright.JSONAuthLogin -->
+      </class> <!-- playwrightTest.PlayWright.Intro -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
